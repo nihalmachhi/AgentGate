@@ -1,4 +1,4 @@
-# AgentGate
+# AgentGate <Hakathon Project>
 
 An explainable, bounded, and gated AI agent commerce layer, built for the Razorpay AI
 Buildathon (Track 1: AI Growth & Agentic Commerce).
