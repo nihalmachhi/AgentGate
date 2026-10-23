@@ -21,6 +21,24 @@ hackathon:
 
 ## How it works
 
+A shopping agent asks to list products or create an order. Every order tool call passes through the policy gate before the Razorpay test client is invoked, and every allow or block decision is recorded for review.
+
+```mermaid
+flowchart LR
+  A[Buyer request] --> B[AI agent]
+  B --> C[Catalog tool]
+  B --> D[Create-order tool]
+  D --> E[Spend, quantity, and rate gate]
+  E -->|allowed| F[Razorpay test API or mock]
+  E -->|blocked with reason| B
+  F --> B
+  B --> A
+  E --> G[SQLite decision audit]
+  F --> G
+```
+
+The gate controls the commerce action; the model cannot call the payment provider directly. The Razorpay integration is test-mode only, and blocked decisions return an explanation the agent can relay to the buyer.
+
 1. A buyer talks to the AI agent.
 2. The agent reads the catalog and decides what to do, using tools: `list_products`,
    `create_order`.
@@ -93,3 +111,4 @@ uvicorn app.main:app --reload
 - The agent only has two tools (`list_products`, `create_order`). A `confirm_payment`
   step for handling Razorpay webhooks asynchronously is a natural extension, left out
   here to keep the demo scope tight and finishable.
+
