@@ -2,7 +2,7 @@
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# AgentGate <Hakathon Project>
+<h1 align="center">AgentGate <Hakathon Project></h1>
 
 An explainable, bounded, and gated AI agent commerce layer, built for the Razorpay AI
 Buildathon (Track 1: AI Growth & Agentic Commerce).
@@ -85,7 +85,7 @@ cp .env.example .env
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# add your Groq key and Razorpay test-mode keys to .env
+<h1 align="center">add your Groq key and Razorpay test-mode keys to .env</h1>
 ```
 
 Without any keys, the gate and audit log still work standalone (see the tests), and
@@ -99,33 +99,33 @@ before real test-mode keys are added.
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# interactive chat with the agent
+<h1 align="center">interactive chat with the agent</h1>
 python run_demo.py
 
 <p align="center">
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# scripted demo that deliberately triggers the spend cap,
+<h1 align="center">scripted demo that deliberately triggers the spend cap,</h1>
 <p align="center">
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# useful for the pitch video's failure-recovery moment
+<h1 align="center">useful for the pitch video's failure-recovery moment</h1>
 python run_demo.py --failure
 
 <p align="center">
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# gate tests, no keys required
+<h1 align="center">gate tests, no keys required</h1>
 python -m pytest tests/
 
 <p align="center">
   <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
 </p>
 
-# optional web API
+<h1 align="center">optional web API</h1>
 uvicorn app.main:app --reload
 ```
 
