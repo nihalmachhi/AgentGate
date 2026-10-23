@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
+
 # AgentGate <Hakathon Project>
 
 An explainable, bounded, and gated AI agent commerce layer, built for the Razorpay AI
@@ -77,6 +81,10 @@ agentgate/
 ```bash
 pip install -r requirements.txt
 cp .env.example .env
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
+
 # add your Groq key and Razorpay test-mode keys to .env
 ```
 
@@ -87,15 +95,35 @@ before real test-mode keys are added.
 ## Running it
 
 ```bash
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
+
 # interactive chat with the agent
 python run_demo.py
 
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
+
 # scripted demo that deliberately triggers the spend cap,
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
+
 # useful for the pitch video's failure-recovery moment
 python run_demo.py --failure
 
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
+
 # gate tests, no keys required
 python -m pytest tests/
+
+<p align="center">
+  <img src="assets/readme-icon.png" alt="AgentGate icon" width="112" />
+</p>
 
 # optional web API
 uvicorn app.main:app --reload
